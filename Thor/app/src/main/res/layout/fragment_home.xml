@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/cityNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cairo"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/iconForWeatherImageView"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_baseline_settings_24"
+        app:layout_constraintEnd_toStartOf="@id/cityNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/cityNameTextView" />
+
+    <TextView
+        android:id="@+id/todayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Today"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iconForWeatherImageView"
+        app:layout_constraintTop_toTopOf="@id/iconForWeatherImageView" />
+
+    <TextView
+        android:id="@+id/dateForTodayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mon, 12 Mar"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/todayTextView"
+        app:layout_constraintTop_toBottomOf="@+id/todayTextView" />
+
+    <TextView
+        android:id="@+id/temperatureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:text="32"
+        android:textSize="42sp"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateForTodayTextView" />
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/circle_selector"
+        app:layout_constraintStart_toEndOf="@+id/temperatureTextView"
+        app:layout_constraintTop_toBottomOf="@+id/dateForTodayTextView" />
+
+    <TextView
+        android:id="@+id/feelsLikeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Feels Like:"
+        app:layout_constraintBottom_toBottomOf="@+id/feelsLikeTemperatureTextView"
+        app:layout_constraintEnd_toStartOf="@+id/feelsLikeTemperatureTextView" />
+
+    <TextView
+        android:id="@+id/feelsLikeTemperatureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="29"
+        app:layout_constraintBottom_toBottomOf="@id/dotImageView"
+        app:layout_constraintEnd_toStartOf="@+id/dotImageView" />
+
+    <ImageView
+        android:id="@+id/dotImageView"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/temperatureTextView" />
+
+    <TextView
+        android:id="@+id/sunSetTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Sun Set:"
+        app:layout_constraintBottom_toBottomOf="@+id/dotImageView"
+        app:layout_constraintStart_toEndOf="@id/dotImageView" />
+
+    <TextView
+        android:id="@+id/dateForSunSetTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="6:00 AM"
+        app:layout_constraintBottom_toBottomOf="@+id/sunSetTextView"
+        app:layout_constraintStart_toEndOf="@id/sunSetTextView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hourlyTemperatureRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dotImageView"
+        tools:listitem="@layout/temperatures_hour_item_view" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/todayDetailsConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/shape_for_details"
+        android:paddingStart="12dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hourlyTemperatureRecyclerView">
+
+
+        <TextView
+            android:id="@+id/humidityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Humidity"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/guideline1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/humidityValueTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="36 %"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/guideline1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/humidityTextView" />
+
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="@+id/humidityTextView" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <TextView
+            android:id="@+id/visibilityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visibility"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toEndOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/visibilityValueTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="7.2 km"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toEndOf="@+id/guideline1"
+            app:layout_constraintTop_toBottomOf="@+id/visibilityTextView" />
+
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/visibilityTextView" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.65891474" />
+
+        <TextView
+            android:id="@+id/windTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wind"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/windValueTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="7.4 km/hr"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/windTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-12dp"
+        android:background="@drawable/shape_for_next_days"
+        android:elevation="4dp"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todayDetailsConstraintLayout">
+
+        <TextView
+            android:id="@+id/nextDaysTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Next 7 days"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nextDaysTextView"
+            tools:listitem="@layout/week_days_item_view"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

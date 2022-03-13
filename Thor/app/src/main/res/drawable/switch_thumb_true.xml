@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/dark_grey_weather" />
+            <size
+                android:width="15dp"
+                android:height="15dp" />
+            <stroke
+                android:width="1sp"
+                android:color="#8e8e8e" />
+
+        </shape>
+    </item>
+
+
+    <item
+        android:bottom="8dp"
+        android:drawable="@drawable/ic_baseline_notifications_24"
+
+        android:left="8dp"
+        android:right="8dp"
+        android:top="8dp" />
+
+
+</layer-list>

@@ -10,6 +10,7 @@
         android:id="@+id/cityNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:text="Cairo"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -132,7 +133,7 @@
         android:id="@+id/todayDetailsConstraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_marginTop="-4dp"
         android:background="@drawable/shape_for_details"
         android:paddingStart="12dp"
         android:paddingTop="12dp"
@@ -262,6 +263,7 @@
             android:layout_height="wrap_content"
             android:text="Next 7 days"
             android:textColor="@color/white"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -273,7 +275,7 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nextDaysTextView"
-            tools:listitem="@layout/week_days_item_view"/>
+            tools:listitem="@layout/week_days_item_view" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

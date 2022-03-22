@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/item_rounded_transparent"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="now"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/weatherStatusImageView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_margin="12dp"
+        android:src="@drawable/ic_baseline_notifications_24"
+        app:layout_constraintEnd_toEndOf="@id/timeTextView"
+        app:layout_constraintStart_toStartOf="@id/timeTextView"
+        app:layout_constraintTop_toBottomOf="@id/timeTextView" />
+
+    <TextView
+        android:id="@+id/hourTemperatureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="18C"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/timeTextView"
+        app:layout_constraintStart_toStartOf="@id/timeTextView"
+        app:layout_constraintTop_toBottomOf="@id/weatherStatusImageView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Thor Weather</string>
+    <string name="title_activity_main" translatable="false">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_setting">Setting</string>
+    <string name="title_alert">Alert</string>
+    <string name="title_favourite">Favourite</string>
+    <string name="current">Now</string>
+    <string name="humidity">Humidity</string>
+    <string name="search_here">Search Here</string>
+    <string name="enable">enable</string>
+    <string name="disable">disable</string>
+    <string name="notification">Notification</string>
+    <string name="save">Save</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="arabic">Arabic</string>
+    <string name="temperature">Temperature</string>
+    <string name="celsius">Celsius</string>
+    <string name="kelvin">Kelvin</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="metre_sec">Metre/Sec</string>
+    <string name="mile_hour">Mile/Hour</string>
+    <string name="add_notification">Add Notification</string>
+    <string name="favourite_weather_condition">favourite weatherDto condition</string>
+    <string name="weather_condition">Weather Condition :</string>
+    <string name="close">Close</string>
+    <string name="weather_details">Weather Details :</string>
+    <string name="no_alert">No Alert this time </string>
+    <string name="it_seem">It seem weatherDto will be </string>
+    <string name="yes">Yes</string>
+    <string name="EnableNotiDialog">Enable Notification Dialog</string>
+    <string name="EnableNotiDialogContent">Do you want  enable notification dialog to show you foses and refill over apps?</string>
+    <string name="some_details">here some details of weatherDto</string>
+    <string name="colon">\u0020:\u0020</string>
+    <string name="feels_like">Feels Like</string>
+    <string name="visibility">Visibility</string>
+    <string name="maps_api_key" translatable="false">AIzaSyA2MpQXT9jp17KlnQQT_4xc6bgJTC6_Zr8</string>
+    <string name="_7_day_forecast">7-DAY FORECAST</string>
+    <string name="pressure">Pressure</string>
+    <string name="wind">Wind</string>
+    <string name="sun_rise">Sun Rise</string>
+    <string name="temperature_unit">Temperature Unit:</string>
+    <string name="wind_speed_unit">Wind Speed Unit:</string>
+    <string name="settings">Settings</string>
+    <string name="selected_location">Selected Location</string>
+    <string name="to_select_location">Do you want to select this location?</string>
+    <string name="no">No</string>
+</resources>
